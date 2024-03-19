@@ -1,0 +1,550 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* @import 'node_modules/modern-normalize/modern-normalize.css';  npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize */         
+  /* @import "component1.css";   Component-specific stylesheets, if any.   */
+  /* @import url(//fonts.googleapis.com/css?family=Font+Name); Add fonts from a hosted services like Google Fonts.   */
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Rubik:wght@300;600;700&display=swap');
+
+/*   ----- Variables  -----  */
+:root {
+    --lavender: rgb(212, 201, 217);
+    --light-green: rgb(128, 155, 166);
+    --mid-green: rgb(77, 108, 115);
+    --mid-green-fade: rgba(77, 108, 115, 0.3);
+    --dark-green: rgb(37, 89, 89);
+    --faded-green: rgba(87, 93, 54, 0.5);
+    --light-main-background: rgba(190, 195, 197, 0.9);
+    --faded-green1: rgb(87, 93, 54);
+    }
+  
+  /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+  body {       /* Can alternatively define in html {}. */
+    background-image:url(images/mount-saint-helen-background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top left;
+    background-repeat: no-repeat;
+    color: var(--dark-green);
+    font-family: Rubik, sans-serif; /* Define wßith at least one font name and its related generic family name.*/
+    margin: 0px auto;
+    padding: 0% ;
+    max-width: 75%;
+    line-height:1.8;
+  }
+  
+  /*  ----- Page layout blocks -----  */
+  header, main, footer {
+    border: 2px solid var(--faded-green1);
+    padding: 2%;
+  }
+  header, footer {
+    background-color: var(--lavender);
+    background-size: cover;
+    color:var(--faded-green1) ;
+    text-align:center ;
+    height:50px ;
+    margin: 0px;
+    font-family: 'Oswald', sans-serif;
+    /* overflow: hidden;
+    white-space:nowrap; */
+  }
+  main {
+    background-color: var(--light-main-background);
+    padding: 10%;
+    border: 2%
+  }
+
+  header img{
+    vertical-align: middle;
+  }
+  section {}
+  article {
+    border-left: 2px solid  var(--faded-green1); 
+    border-bottom: 2px solid  var(--faded-green1);
+    padding-left: 2%;
+  }
+    #topic1 {}
+    #topic2 {}
+  div {}
+  aside {}
+  footer {}
+  
+  /* ----- Anchors ----- Text links */
+  a {
+    text-decoration: none;
+  }
+  a:link {
+    color: rgb(144, 160, 161);
+    border: 2px solid rgb(0, 255, 225);
+    padding: 1px 3px;
+  }
+  a:hover {
+    color: rgb(23, 97, 226); background-color: rgb(220, 243, 245);
+  }
+  a:active {} /* red by default */
+  a:visited {}  /* purple by default */
+  
+  /*  ----- Navigation ----- Override text links for navigation only.  */
+  .global{
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav {
+        background-color: var(--lavender);
+        padding: 3px;
+  }
+
+  nav a {
+    color: var(--dark-green);
+    border:1px solid rgba(24, 90, 166, 0.411);
+    border-radius:5px 5px 0 0; 
+    color:rgba(23, 16, 7, 0.771);
+    font-size:1.1em;
+    font-weight:bold;
+    margin-right:3px;
+    padding: 3px 20px 5px 20px;
+    text-decoration:none;
+  }
+  nav a:hover {
+    background-color: var(--mid-green);
+    color: var(--light-main-background);
+  }
+
+  .local ul {
+    display: flex;
+    list-style-type: none; 
+    padding: 0; 
+    justify-content: space-evenly; 
+    width: 100%; 
+    align-content: center;
+    flex-wrap: wrap;
+ }
+
+  .local a{
+    border:4px solid rgba(7, 155, 188, 0.73);
+    border-radius:10px 10px 10px 10px; 
+    color:rgba(12, 91, 218, 0.72);
+    font-size:0.8em;
+    font-weight: bold;
+    margin-right:4px;
+    padding: 3px 10px;
+    text-decoration: none;
+  }
+
+  
+  /*  -----  Typography  ----- */
+  p {}
+  br {}
+  ol, ul, dl {}
+  li, dd {margin-bottom: 8px;}
+  dt {
+    font-weight: bold;
+    color:rgb(102, 89, 114);
+  }
+  dd {}
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Rubik, sans-serif;
+    font-weight: bold;
+} 
+  header h1, footer p {
+    font-size: 2vw;
+  }
+  h2 {}
+  h3 {}
+  h4 {}
+  h5 {}
+  h6 {}
+  
+  abbr {}
+  acronym {}
+  address {}
+  blockquote {}
+    q {}
+    cite {}
+  em {}
+  hr {}
+  mark {}
+  s {}
+  span {}
+  strong {}
+  sub {}
+  sup {}
+  time {}
+  
+  /*  ----- Coding or instructional typography ----- */
+  pre {}
+  code {}
+  kbd {}
+  samp {}
+  var {}
+  del {} 
+  ins {}
+  
+  /*  ----- Table ----- */
+table {
+  font-family: Rubik, sans-serif;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: right;
+  border-collapse: collapse; 
+}
+
+table img {
+  width: 100px; 
+  height: auto; 
+  border: 2px dashed #21309ea1; 
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+th, td {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+table input {
+  width: 95%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
+caption{
+  background-color: var(--faded-green1);
+  font-weight: bold;
+  padding: 2%;
+  color:aqua;
+}
+
+thead, tbody, tfoot, th, td {
+  text-align: center;
+  border: 2px solid #21309ea1; 
+}
+
+th {
+  background-color: rgb(180, 188, 191);
+  padding: 10px; 
+}
+
+tr {
+  padding: 10px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: lightblue;
+}
+
+tfoot tr {
+  background-color: #f8f9fa;
+  font-weight: bold; 
+}
+
+  th {}
+  td {
+    text-align: center;
+    border: 4% blue;
+    margin: 2%;
+  }
+    td:nth-child(1) {}
+  colgroup {}
+  data {}
+  datalist {}
+  
+  /* Adjusting column widths */
+#timesheets th, #timesheets td {
+  text-align: left;
+  padding: 10px;
+}
+
+/* Increases Room */
+#timesheets th:nth-child(1), #timesheets td:nth-child(1) {
+  width: 30%; /* Adjust as needed */
+}
+
+/* Reduces Room */
+#timesheets th:nth-child(2), #timesheets td:nth-child(2) {
+  width: 15%; /* Adjust as needed */
+}
+
+/* Increase room */
+#timesheets th:nth-child(3), #timesheets td:nth-child(3) {
+  width: 20%; /* Adjust as needed */
+}
+
+/* Reduces room in Delete column*/
+#timesheets th:nth-child(4), #timesheets td:nth-child(4) {
+  width: 10%; /* or less, adjust as needed */
+}
+
+/* Reduces Room in Edit column */
+#timesheets th:nth-child(5), #timesheets td:nth-child(5) {
+  width: 10%; /* or less, adjust as needed */
+}
+
+/* Fixing the table layout  to respect the width settings */
+#timesheets {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+/* For responsiveness, adjusting table on smaller screens */
+@media screen and (max-width: 768px) {
+  #timesheets th, #timesheets td {
+    padding: 8px;
+    font-size: smaller; 
+  }
+}
+
+#product
+  /*  ----- Form ----- */
+  table, caption, td,
+thead, tbody, tfoot, th, td {
+text-align: center;
+border: 2px solid #21309ea1;
+}
+
+
+  form, button, input, select, textarea{
+    font-family: Rubik, sans-serif;
+    font-weight:800;
+  }
+  form {}
+
+  button, input, select, textarea{
+    font-family: inherit;
+  }
+  fieldset {
+    border:4px solid rgba(7, 155, 188, 0.73); /* vid ref */
+    background-color: var(--light-main-background);
+    margin-bottom: 4%;
+    padding: 2%;
+  }
+    legend {
+      border-top: 4px solid rgba(7, 155, 188, 0.73); /* vid ref */
+      border-left: 4px dotted rgba(7, 155, 188, 0.73); /* vid ref */
+      border-right: 4px dotted(7, 155, 188, 0.73); /* vid ref */
+      background-color: var(--light-main-background);
+      margin-bottom: 4%;
+      padding: 2%;
+    }   
+    
+    /* title for field box*/
+  label {
+    display: block;
+    margin-top: 5%;
+    font-size: 90%;
+    color: black;
+  }
+  button {
+    padding: 2%;
+    border: 4px solid rgba(7, 188, 40, 0.73);
+    margin: 1%;
+    color: rgb(68, 0, 255);
+
+  }
+
+  input {
+    padding: 2%;
+    border-right: 4px dotted rgba(7, 155, 188, 0.73);
+    margin: 1%;
+    font-size: 120%;
+    /* display: block; */
+    /* width: 90%; */
+  } 
+
+  .required input {
+    padding: 2%;
+    border: 4px solid #b15d4e;
+    margin: 1%;
+    font-size: 120%;
+    display: block; 
+    width: 90%; 
+  } 
+
+  :focus{
+    background-color: rgb(143, 143, 160);
+  }
+
+  *::placeholder {
+    color: #707070; 
+    opacity: 1;
+  }
+  
+  /* Style for required input fields */
+*:required {
+  border: 4px solid #b15d4e; 
+}
+
+label.required::after {
+  content: ' *';
+  color: #e30c0c; 
+  margin: 4px;
+  border: 5%;
+}
+
+body {
+  color: #333333; 
+  background-color: #f2f2f2;
+}
+
+  select {
+    width: 100%; 
+    padding: 8px 12px; 
+    margin: 10px 0; 
+   
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    outline: none; 
+  }
+    optgroup {}
+    option {}
+    textarea {
+      width: 100%; 
+      height: auto; 
+      min-height: 100px;
+      resize: vertical; 
+      padding: 8px; 
+      border: 1px solid #212f9e; 
+      border-radius: 4px; 
+      box-sizing: border-box; 
+    }
+
+.icon-large {
+  font-size: 24px;
+}
+
+    
+  output {}
+  meter {}
+  progress {}
+  
+  
+  /* ----- Media ----- */
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: var(--lavender);
+    width: 100%;
+  }
+  
+  .gallery figure {
+    /* Flexible basis with a minimum width */
+    flex: 1 1 300px; /* Grow, shrink, and base width */
+    margin: 10px;
+    box-shadow: 0 4px 8px var(--mid-green-fade);
+    border: 2px solid var(--mid-green);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--faded-green1);
+    transition: transform 0.3s ease;
+    max-width: calc(100% - 20px); /* Ensure it does not exceed the container's width */
+  }
+  
+  .gallery figure:hover {
+    transform: scale(1.05);
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .gallery figcaption {
+    padding: 8px;
+    color: var(--lavender);
+    background-color: var(--faded-green1);
+    text-align: center;
+    font-size: 1em;
+    font-weight: 600;
+  }
+  
+  figure {
+    figure {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 100%;
+    }
+  }
+    figcaption {}
+    figure img {}
+  svg {}
+  picture {}
+    source {}
+  iframe {}
+  video {}
+  audio {}
+  embed {}
+  object {}
+
+  /* aside styling */
+aside {
+  width: 20%; /* Example width */
+  margin: 10px;
+  padding: 15px;
+  border: 2px solid var(--mid-green); 
+  color: var(--dark-green); 
+  background-color: var(--light-green); 
+  float: left; 
+}
+
+a[href^="mailto:"]:link {
+  color: var(--light-green); 
+}
+
+a[href^="mailto:"]:hover {
+  color: var(--lavender);
+}
+
+  
+  /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+  .gallery {}
+  
+  .floatright {}
+  .floatleft {}
+  .center-middle {}
+  
+  .ten {}
+  .twenty {}
+  .thirty {}
+  .forty {}
+  .fifty {}
+  .sixty {}
+  .seventy {}
+  .eighty {}
+  
+  .radius {}
+  .circle {}
+  .boxshadow {}
+  .tshadow {} 
+  .gradient {}
+  .shape {}
+  
+  @keyframes App-logo {}
+  
+  /*   ===== TABLET  media query overrides mobile styles ===== */
+  @media all and (min-width: 600px) {}
+  
+  /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+  @media all and (min-width: 1080px) {}
+  
+  /*   ===== PRINT  media query overrides previous styles =====  */
+  @media print {}
+  
